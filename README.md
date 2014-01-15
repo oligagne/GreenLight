@@ -3,6 +3,5 @@ GreenLight
 
 Framework for Traffic light coordination.
 
-Ubuntu 12.04
-QT5
+Visual Studio 2013
 C++ 11
