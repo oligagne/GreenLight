@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="6900097a-173e-4767-afeb-75a8f00eb10f" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <comments>
+    <comment Id="fd6bf982-00f2-413f-b4b3-fdf2f156af1e" name="Comment1">
+      <body>Need an Interface.</body>
+    </comment>
+    <comment Id="b6b70b7e-bbfa-4f3f-97b8-ae03e099d76f" name="Comment2">
+      <body>KML data -&gt; GL.Objets
+</body>
+    </comment>
+    <comment Id="3ff38ecb-2899-4757-bd19-a2708357335f" name="Comment3">
+      <body>Agregate GL.Object.TrafficLight</body>
+    </comment>
+  </comments>
+  <layers>
+    <layer Id="398c562e-e6f0-4cef-83cb-34bd279bee1f" name="GL.Map.Adapter&#xD;&#xA;" />
+    <layer Id="8947ef86-5882-4a16-8737-e125d59c22a1" name="GL.Simulator&#xD;&#xA;">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="2f358dd2-76cc-4068-be2d-fc833325430f" direction="Forward">
+          <layerMoniker Id="398c562e-e6f0-4cef-83cb-34bd279bee1f" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="79b31886-5b3b-439e-bb80-6e1ff69fb8d3" direction="Forward">
+          <layerMoniker Id="f32d9421-221e-4895-837c-f9f64ca53b22" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <childLayers>
+        <layer Id="0ac883f0-812e-40a6-9817-1e72c8188f30" name="EventsInjector" />
+      </childLayers>
+    </layer>
+    <layer Id="f32d9421-221e-4895-837c-f9f64ca53b22" name="GL.Objects&#xD;&#xA;">
+      <childLayers>
+        <layer Id="764cae54-2c38-44a4-927c-212d8c6698ba" name="Behavior" />
+        <layer Id="5e5f6dc9-3fc0-4aa6-885d-62869183892d" name="TrafficLight&#xD;&#xA;" />
+        <layer Id="fb9f4e70-d32e-4ca9-be7a-1a1513714fd6" name="Location" />
+        <layer Id="ceac04d3-4944-4cb3-9c4a-fac28e1b0d49" name="Car" />
+      </childLayers>
+    </layer>
+    <layer Id="00cf1d28-ab83-4951-9a40-2cb45da7473c" name="GL.Populator&#xD;&#xA;">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="6a6398fb-3ad0-4826-bb58-b107f8e01856" direction="Forward">
+          <layerMoniker Id="398c562e-e6f0-4cef-83cb-34bd279bee1f" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="b53b1362-7fc9-4433-9bf3-0fc82863d147" direction="Forward">
+          <layerMoniker Id="69df37cd-5dcb-4b24-958b-727e7ffc917f" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+    <layer Id="69df37cd-5dcb-4b24-958b-727e7ffc917f" name="GL.Transformers">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="2a813ab0-81ad-4b1f-aa87-2dc31547b1f4" direction="Forward">
+          <layerMoniker Id="f32d9421-221e-4895-837c-f9f64ca53b22" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+    </layer>
+  </layers>
+</layerModel>

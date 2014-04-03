@@ -1,5 +1,9 @@
 #include "coordinates.h"
 
+Coordinates::Coordinates()
+{
+}
+
 Coordinates::Coordinates(float x, float y)
 {
     _x = x;
